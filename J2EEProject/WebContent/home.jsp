@@ -6,6 +6,34 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>login</title>
 </head>
+<body>
+<h1>Welcome to DAIRY MANAGEMENT portal</h1>
+ <header class="section header">
+    <div class="trapezoid"></div>
+    
+    <div class="header__text">
+      <h1>LOGIN</h1>
+    </div>
+  </header>
+  
+<form action="LoginServlet" method="post">
+			<table style="with: 50%">
+				<tr>
+					<td><h4>USER</h4></td>
+					<td><input type="text" name="user" /></td>
+				</tr>
+				<tr>
+					<td><h4>PASSWORD</h4></td>
+					<td><input type="text" name="pass" /></td>
+				</tr>
+
+			</table>
+			<button><input type="submit" value="Submit" /></button>
+			</form>
+</body>
+</html>
+
+
 <style>
 @import url("https://fonts.googleapis.com/css?family=Nunito:300");
 body {
@@ -91,31 +119,3 @@ form > p {
 }
 
 </style>
-<body>
-  <header class="section header">
-    <div class="trapezoid"></div>
-    
-    <div class="header__text">
-      <h1>LOGIN</h1>
-    </div>
-  </header>
-  
-
-<form action="LoginServlet" method="post">
-			<table style="with: 100%">
-				<tr>
-					<td><h4>USER ID</h4></td>
-					<td><input type="text" name="user" /></td>
-				</tr>
-				<tr>
-					<td><h4>PASSWORD</h4></td>
-					<td><input type="text" name="pass" /></td>
-				</tr>
-
-			</table>
-			<button><input type="submit" value="Submit" /></button></form>
-			
-
-
-</body>
-</html>

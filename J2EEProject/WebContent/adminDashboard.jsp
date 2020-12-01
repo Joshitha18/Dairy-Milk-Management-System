@@ -6,6 +6,30 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Select options</title>
 </head>
+
+
+
+
+<body>
+<div style="height:150px"></div>
+<form action="adminManageHead.jsp">
+    <input type="submit" value="Manage Head" />
+</form>
+<form action="adminManageStaff.jsp">
+    <input type="submit" value="Manage Staff" />
+</form>
+<form action="adminManageSeller.jsp">
+    <input type="submit" value="Manage Seller" />
+</form>
+<form action="adminManageBuyer.jsp">
+    <input type="submit" value="Manage Buyer" />
+</form>
+
+</html>
+
+
+
+
 <style>
 @import url("https://fonts.googleapis.com/css?family=Nunito:300");
 body {
@@ -91,19 +115,4 @@ form > p {
 }
 
 </style>
-<body>
-<div style = "height:150px"> </div>
-<form action="adminManageHead.jsp">
-    <input type="submit" value="Manage Head" />
-</form>
-<form action="adminManageStaff.jsp">
-    <input type="submit" value="Manage Staff" />
-</form>
-<form action="adminManageSeller.jsp">
-    <input type="submit" value="Manage Seller" />
-</form>
-<form action="adminManageBuyer.jsp">
-    <input type="submit" value="Manage Buyer" />
-</form>
 
-</html>
