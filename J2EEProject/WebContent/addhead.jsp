@@ -6,6 +6,45 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>issue Addition Form</title>
 </head>
+
+<body>
+<h1> Dairy Management System</h1>
+ <header class="section header">
+    <div class="trapezoid"></div>
+    
+    <div class="header__text">
+      <h1>Head Details</h1>
+    </div>
+  </header>
+<form action="addHead" method="post">
+			<table style="with: 50%">
+				<tr>
+					<td>Id</td>
+					<td><input type="text" name="id" /></td>
+				</tr>
+				<tr>
+					<td>name</td>
+					<td><input type="text" name="name" /></td>
+				</tr>
+				<tr>
+					<td>Salary</td>
+					<td><input type="text" name="sal" /></td>
+				</tr>
+					<tr>
+					<td>phone no</td>
+					<td><input type="text" name="phno" /></td>
+				</tr>
+				</tr>
+					<tr>
+					<td>center no</td>
+					<td><input type="text" name="cno" /></td>
+				</tr>
+			</table>
+			<input type="submit" value="Submit" /></form>
+</body>
+</html>
+
+
 <style>
 @import url("https://fonts.googleapis.com/css?family=Nunito:300");
 body {
@@ -91,38 +130,3 @@ form > p {
 }
 
 </style>
-<body>
-  <header class="section header">
-    <div class="trapezoid"></div>
-    
-    <div class="header__text">
-      <h1>Head Details</h1>
-    </div>
-  </header>
-<form action="addHead" method="post">
-			<table style="with: 50%">
-				<tr>
-					<td>Id</td>
-					<td><input type="text" name="id" /></td>
-				</tr>
-				<tr>
-					<td>name</td>
-					<td><input type="text" name="name" /></td>
-				</tr>
-				<tr>
-					<td>Salary</td>
-					<td><input type="text" name="sal" /></td>
-				</tr>
-					<tr>
-					<td>phone no</td>
-					<td><input type="text" name="phno" /></td>
-				</tr>
-				</tr>
-					<tr>
-					<td>center no</td>
-					<td><input type="text" name="cno" /></td>
-				</tr>
-			</table>
-			<input type="submit" value="Submit" /></form>
-</body>
-</html>

@@ -7,6 +7,6 @@
 <title>Insert book</title>
 </head>
 <body>
- <a><b>Book is added successfully!</b></a>
+ <a><b>Added successfully !</b></a>
 </body>
 </html>
