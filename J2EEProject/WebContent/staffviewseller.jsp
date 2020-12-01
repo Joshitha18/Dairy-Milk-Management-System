@@ -23,7 +23,7 @@ con = DriverManager.getConnection(url, username, password); //attempting to conn
 <!DOCTYPE html>
 <html>
 <body>
-<h1>heads</h1>
+<h1>Staff View Sellers</h1>
 <table border="1">
 <tr>
 <td>code</td>

@@ -15,7 +15,6 @@
       <h1>Buyer </h1>
     </div>
   </header>
-<h1>Enter ID</h1>
 <form action="buyerServlet" method="post">
 			<table style="with: 50%">
 				<tr>

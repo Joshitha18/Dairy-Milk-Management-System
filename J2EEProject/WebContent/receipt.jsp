@@ -4,17 +4,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Select options</title>
 </head>
 <body>
-<form action="headaddseller.jsp">
-    <input type="submit" value="Add seller" />
-</form>
-<form action="headviewseller.jsp">
-    <input type="submit" value="view seller" />
-</form>
-<form action="headdeleteseller.jsp">
-    <input type="submit" value="delete seller" />
-</form>
+<form action="sellerReceipt.jsp" method="post">
+			<table style="with: 50%">
+				<tr>
+					<td>date</td>
+					<td><input type="text" name="date" /></td>
+				</tr>
+
+
+			</table>
+			<input type="submit" value="Submit" /></form>
 </body>
 </html>

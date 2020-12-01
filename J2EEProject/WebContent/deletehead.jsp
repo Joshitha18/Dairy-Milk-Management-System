@@ -20,11 +20,11 @@
 <form action="deleteHead" method="post">
 			<table style="with: 50%">
 				<tr>
-					<td>User ID</td>
+					<td>ID</td>
 					<td><input type="text" name="id" /></td>
 				</tr>
 				<tr>
-					<td>Password</td>
+					<td>name</td>
 					<td><input type="text" name="name" /></td>
 				</tr>
 

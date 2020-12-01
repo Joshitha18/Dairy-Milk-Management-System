@@ -24,7 +24,7 @@ con = DriverManager.getConnection(url, username, password); //attempting to conn
 <!DOCTYPE html>
 <html>
 <body>
-<h1>buyer</h1>
+<h1>buyer Bill</h1>
 <table border="1">
 <tr>
 <td>shopNo</td>

@@ -17,6 +17,9 @@
 <form action="sellerDetails.jsp">
     <input type="submit" value="seller details" />
 </form>
+<form action="receipt.jsp">
+    <input type="submit" value="receipt" />
+</form>
 <form action="feedback_form.jsp">
     <input type="submit" value="feedback"/>
 </form>

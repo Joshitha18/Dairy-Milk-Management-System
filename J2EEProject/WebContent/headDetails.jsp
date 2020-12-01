@@ -25,6 +25,9 @@ con = DriverManager.getConnection(url, username, password); //attempting to conn
 <html>
 <body>
 <h1>head details</h1>
+<form action="updatepassword.jsp">
+    <input type="submit" value="update Password" />
+</form>
 <table border="1">
 <tr>
 <td>id</td>
