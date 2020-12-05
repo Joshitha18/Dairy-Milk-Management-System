@@ -1,4 +1,4 @@
-<%@page import="java.sql.DriverManager"%>
+ <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
@@ -13,30 +13,30 @@ con = DriverManager.getConnection(url, username, password); //attempting to conn
 	System.out.println("Printing connection object "+con);
 
 	Statement st = con.createStatement();
-	ResultSet resultSet = st.executeQuery("select * from sellertable natural join users");
+	ResultSet resultSet = st.executeQuery("select * from centertable");
 %>
 <!DOCTYPE html>
 <html>
 <body>
-<h1>Sellers</h1>
+<h1>heads</h1>
 <table border="1">
 <tr>
-<td>code</td>
-<td>id</td>
-<td>name</td>
-<td>cattle type</td>
-<td>reg date</td>
+
+<td>center no</td>
+<td>city</td>
+<td>head id</td>
+
 </tr>
 <%
 try{
 while(resultSet.next()){
 %>
 <tr>
-<td><%=resultSet.getString("s_code") %></td>
-<td><%=resultSet.getString("user_id") %></td>
-<td><%=resultSet.getString("s_name") %></td>
-<td><%=resultSet.getString("cattle_type") %></td>
-<td><%=resultSet.getString("r_date") %></td>
+
+<td><%=resultSet.getString("center_no") %></td>
+<td><%=resultSet.getString("city") %></td>
+<td><%=resultSet.getString("head_id") %></td>
+
 </tr>
 <%
 }

@@ -24,7 +24,6 @@ public class deleteSeller extends HttpServlet {
 
 
 		//getting input values from jsp page
-		String code = request.getParameter("s_code");
 		String id = request.getParameter("id");
 
 		Connection con = null;
@@ -36,17 +35,12 @@ public class deleteSeller extends HttpServlet {
 		con = DriverManager.getConnection(url, username, password); //attempting to connect to PostgreSQL database
  		System.out.println("Printing connection object "+con);
 
-		PreparedStatement st = con .prepareStatement("delete from sellertable where s_code=?");
- 		st.setString(1,code);
-
-		int result=st.executeUpdate();	
-		
-		st = con .prepareStatement("delete from users where user_id=?");
+		PreparedStatement st = con .prepareStatement("delete from users where user_id=?");
  		st.setString(1,id);
 		
 		int result1=st.executeUpdate();
 		
-		if(result>0 && result1>0)		{
+		if(result1>0)		{
 			
 			RequestDispatcher rd = request.getRequestDispatcher("Deleted.jsp");
 			rd.forward(request, response);

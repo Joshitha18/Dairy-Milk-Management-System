@@ -16,7 +16,7 @@ con = DriverManager.getConnection(url, username, password); //attempting to conn
 	ServletContext context=getServletContext();  
 	String id=(String)context.getAttribute("staff_headID");
 
-	PreparedStatement st = con .prepareStatement("select * from sellertable where head_ID = ?");
+	PreparedStatement st = con .prepareStatement("select * from sellertable natural join users where head_ID = ?");
 		st.setString(1,id);
 	ResultSet resultSet=st.executeQuery();
 %>

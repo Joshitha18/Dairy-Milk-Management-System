@@ -12,6 +12,12 @@
 
 <body>
 <div style="height:150px"></div>
+<form action="viewcenter.jsp">
+    <input type="submit" value="View centers" />
+</form>
+<form action="addcenter.jsp">
+    <input type="submit" value="Add center" />
+</form>
 <form action="adminManageHead.jsp">
     <input type="submit" value="Manage Head" />
 </form>

@@ -15,6 +15,9 @@
     <div class="header__text">
       <h1>FEEDBACK :)</h1>
     </div>
+    </header>
+
+			
 <form action="feedbackServlet" method="post">
 			<table style="with: 50%">
 				<tr>
@@ -38,7 +41,10 @@
 					<td><input type="text" name="date" /></td>
 				</tr>
 			</table>
-			<input type="submit" value="Submit" /></form>
+			<input type="submit" value="Submit" />
+			</form>
+			
+	
 </body>
 </html>
 

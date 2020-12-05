@@ -25,7 +25,6 @@ public class headdeleteSeller extends HttpServlet {
 
 
 		//getting input values from jsp page
-		String code = request.getParameter("code");
 		String id = request.getParameter("id");
 
 		Connection con = null;
@@ -38,17 +37,13 @@ public class headdeleteSeller extends HttpServlet {
  		System.out.println("Printing connection object "+con);
  		ServletContext context=getServletContext();  
  		String hno=(String)context.getAttribute("headID");
-		PreparedStatement st = con .prepareStatement("delete from sellertable where s_code=? and head_ID=?");
- 		st.setString(1,code);
-		st.setString(2,hno);
-		int result=st.executeUpdate();	
-		
-		st = con .prepareStatement("delete from users where user_id=?");
+
+		PreparedStatement st = con .prepareStatement("delete from users where user_id=?");
  		st.setString(1,id);
 		
 		int result1=st.executeUpdate();
 		
-		if(result>0 && result1>0)		{
+		if(result1>0)		{
 			
 			RequestDispatcher rd = request.getRequestDispatcher("Deleted.jsp");
 			rd.forward(request, response);

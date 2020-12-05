@@ -15,14 +15,14 @@
       <h1>Manage Buyer </h1>
     </div>
   </header>
-<form action="addsshop.jsp">
-    <input type="submit" value="Add a seller" />
+<form action="addshop.jsp">
+    <input type="submit" value="Add a buyer" />
 </form>
 <form action="viewshop.jsp">
-    <input type="submit" value="view seller" />
+    <input type="submit" value="view buyer" />
 </form>
 <form action="deleteshop.jsp">
-    <input type="submit" value="delete seller" />
+    <input type="submit" value="delete buyer" />
 </form>
 </body>
 </html>

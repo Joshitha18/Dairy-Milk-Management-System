@@ -15,6 +15,7 @@
     <div class="header__text">
       <h1>DELETE STAFF</h1>
     </div>
+    </header>
 <form action="deleteStaff" method="post">
 			<table style="with: 50%">
 				<tr>

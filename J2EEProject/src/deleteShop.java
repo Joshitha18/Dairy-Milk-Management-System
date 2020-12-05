@@ -26,8 +26,7 @@ public class deleteShop extends HttpServlet {
 
 		//getting input values from jsp page
 		String no = request.getParameter("num");
-		String name = request.getParameter("name");
-		String bid = request.getParameter("bid");
+
 		
 		Connection con = null;
  		String url = "jdbc:postgresql://localhost:5432/library"; //PostgreSQL URL and followed by the database name
@@ -37,19 +36,14 @@ public class deleteShop extends HttpServlet {
 		Class.forName("org.postgresql.Driver");
 		con = DriverManager.getConnection(url, username, password); //attempting to connect to PostgreSQL database
  		System.out.println("Printing connection object "+con);
-
-		PreparedStatement st = con .prepareStatement("delete from shoptable where shopNo=? and shop_name=? and buyer_id=?");
- 		st.setString(1,no);
-		st.setString(2,name);
-		st.setString(3,bid);
-		int result=st.executeUpdate();	
+	
 		
-		st = con .prepareStatement("delete from users where user_id=?");
+		PreparedStatement st = con .prepareStatement("delete from users where user_id=?");
  		st.setString(1,no);
 		
 		int result1=st.executeUpdate();
 		
-		if(result>0 && result1>0)
+		if(result1>0)
 		{
 			
 			RequestDispatcher rd = request.getRequestDispatcher("Deleted.jsp");

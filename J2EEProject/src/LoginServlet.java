@@ -77,7 +77,17 @@ public class LoginServlet extends HttpServlet {
 			rd.forward(request, response);
 		    }
 		    if(role.equals("Buyer")) {
-		    RequestDispatcher rd = request.getRequestDispatcher("BuyerDashboard.jsp");
+		    	ServletContext context=getServletContext();  
+		      	  context.setAttribute("shop_no",id);
+		      	st = con .prepareStatement("select buyer_id from shoptable where shopno = ?");
+		 		st.setString(1,id);
+				rs=st.executeQuery();
+				String bid="";
+				while (rs.next()) {
+		    		  bid=rs.getString("buyer_id");
+		    		}
+				context.setAttribute("buyer_id",bid);
+		    RequestDispatcher rd = request.getRequestDispatcher("buyer.jsp");
 			rd.forward(request, response);
 		    }
 		}

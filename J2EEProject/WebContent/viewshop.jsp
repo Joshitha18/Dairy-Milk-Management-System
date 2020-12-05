@@ -13,12 +13,12 @@ con = DriverManager.getConnection(url, username, password); //attempting to conn
 	System.out.println("Printing connection object "+con);
 
 	Statement st = con.createStatement();
-	ResultSet resultSet = st.executeQuery("select * from shoptable");
+	ResultSet resultSet = st.executeQuery("select * from users natural join shoptable where shopno=user_id");
 %>
 <!DOCTYPE html>
 <html>
 <body>
-<h1>shops</h1>
+<h1>All shops</h1>
 <table border="1">
 <tr>
 <td>shopNo</td>

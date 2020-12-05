@@ -104,8 +104,6 @@ form > p {
 <form action="viewhead.jsp">
     <input type="submit" value="view head" />
 </form>
-<form action="deletehead.jsp">
-    <input type="submit" value="delete head" />
-</form>
+
 </body>
 </html>

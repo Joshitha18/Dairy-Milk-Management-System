@@ -15,33 +15,42 @@ con = DriverManager.getConnection(url, username, password); //attempting to conn
 	
 	ServletContext context=getServletContext();  
 	String id=(String)context.getAttribute("headID");
-
-	PreparedStatement st = con .prepareStatement("select * from sellertable natural join users where head_ID = ?");
-		st.setString(1,id);
+	PreparedStatement st = con .prepareStatement("select center_no from centertable where head_id = ?");
+	st.setString(1,id);
 	ResultSet resultSet=st.executeQuery();
+	String cno = "";
+	while(resultSet.next()){
+		cno=resultSet.getString("center_no");
+		}
+	st = con .prepareStatement("select * from milk_rate_table where center_no = ?");
+		st.setString(1,cno);
+	resultSet=st.executeQuery();
 %>
 <!DOCTYPE html>
 <html>
 <body>
-<h1>seller</h1>
 <table border="1">
 <tr>
-<td>code</td>
-<td>id</td>
-<td>name</td>
-<td>cattle type</td>
-<td>reg date</td>
+<td>fat buffalo milk</td>
+<td>fat cow milk</td>
+<td>qty cow milk</td>
+<td>qty buffalo milk</td>
+<td>date</td>
+<td>center_no</td>
 </tr>
 <%
 try{
 while(resultSet.next()){
 %>
 <tr>
-<td><%=resultSet.getString("s_code") %></td>
-<td><%=resultSet.getString("user_id") %></td>
-<td><%=resultSet.getString("s_name") %></td>
-<td><%=resultSet.getString("cattle_type") %></td>
-<td><%=resultSet.getString("r_date") %></td>
+<td><%=resultSet.getFloat("fat_cow_milk") %></td>
+<td><%=resultSet.getFloat("fat_buffalo_milk") %></td>
+
+<td><%=resultSet.getFloat("quantity_cow_milk") %></td>
+<td><%=resultSet.getFloat("quantity_buffalo_milk") %></td>
+
+<td><%=resultSet.getString("date") %></td>
+<td><%=resultSet.getString("center_no") %></td>
 </tr>
 <%
 }

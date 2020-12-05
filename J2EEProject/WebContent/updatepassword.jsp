@@ -12,7 +12,7 @@
       <h1>Update Password</h1>
     </div>
   </header>
-<form action="updatePass" method="post">
+<form action="passwordServlet" method="post">
 			<table style="with: 50%">
 				<tr>
 					<td>Confirm User_id</td>
